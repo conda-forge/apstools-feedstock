@@ -16,7 +16,7 @@ build:
     - spec2ophyd = apstools.migration.spec2ophyd:main
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
-  number: 0
+  number: 1
 
 requirements:
   host:
