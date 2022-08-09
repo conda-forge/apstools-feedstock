@@ -45,7 +45,7 @@ test:
   commands:
     - pip check
     - bluesky_snapshot --help
-    - bluesky_snapshot_viewer --help
+    # - bluesky_snapshot_viewer --help
     - spec2ophyd --help
   requires:
     - pip
