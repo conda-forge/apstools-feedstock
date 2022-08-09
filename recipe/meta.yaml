@@ -37,6 +37,7 @@ requirements:
     - pyresttable
     - spec2nexus >=2021.1.7
     - xlrd
+    - xorg-libx11
 
 test:
   imports:
