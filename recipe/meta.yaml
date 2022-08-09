@@ -15,8 +15,8 @@ build:
     - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py>=310]
-  number: 1
+  skip: true  # [py>39]
+  number: 2
 
 requirements:
   host:
@@ -37,6 +37,7 @@ requirements:
     - pyresttable
     - spec2nexus >=2021.1.7
     - xlrd
+    - xorg-libx11
 
 test:
   imports:
@@ -44,7 +45,7 @@ test:
   commands:
     - pip check
     - bluesky_snapshot --help
-    - bluesky_snapshot_viewer --help
+    # - bluesky_snapshot_viewer --help
     - spec2ophyd --help
   requires:
     - pip
