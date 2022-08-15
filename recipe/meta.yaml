@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
-    # - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
+    - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38 and py>310]
@@ -56,7 +56,7 @@ test:
   commands:
     - pip check
     - bluesky_snapshot --help
-    - bluesky_snapshot_viewer --help
+    # - bluesky_snapshot_viewer --help
     - spec2ophyd --help
   requires:
     - pip
