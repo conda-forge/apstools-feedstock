@@ -44,7 +44,7 @@ requirements:
     - pyRestTable
     - qt =5
     - readline !=8.1.2
-    - setuptools-scm
+    # - setuptools-scm
     - spec2nexus
     - sphinx >=5
     - xlrd
