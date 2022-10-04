@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.3" %}
+{% set version = "1.6.5-rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apstools-{{ version }}.tar.gz
-  sha256: 7d419c213b06278c1e528731d7ee3dad151abfcd63f15b72888975d608535e08
+  sha256: 660aef91213e491e3086384e52299db9bf7dee5b4d1476be30cc93515aace6b5
 
 build:
   entry_points:
@@ -22,13 +22,13 @@ requirements:
   host:
     - pip
     - python
+    - setuptools-scm
   run:
     - python
     - area-detector-handlers
     - bluesky >=1.6.7
     - databroker =1.2
     - databroker-pack
-    - furo
     - h5py
     - intake
     - mongoquery >=1.3.6
