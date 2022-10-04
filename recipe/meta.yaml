@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.5rc4" %}
+{% set version = "1.6.5rc5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apstools-{{ version }}.tar.gz
-  sha256: a8374a9c2095741b689527a032c76de7c1a9a63f2d04f9de948f009ed352441f
+  sha256: bf5993d8a81f166bcc63c3c1cfcffd2cb44cb49a878994f061386d642fb143d5
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - spec2ophyd = apstools.migration.spec2ophyd:main
   # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
   # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
-  script: SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_DEBUG=1 SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38 and py>310]
   number: 0
 
