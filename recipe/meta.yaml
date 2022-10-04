@@ -14,7 +14,7 @@ build:
     - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
     - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install -e . -vv
   skip: true  # [py<38 and py>310]
   number: 0
 
