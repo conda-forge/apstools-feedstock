@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.3" %}
+{% set version = "1.6.5rc5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,28 +7,32 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apstools-{{ version }}.tar.gz
-  sha256: 7d419c213b06278c1e528731d7ee3dad151abfcd63f15b72888975d608535e08
+  sha256: bf5993d8a81f166bcc63c3c1cfcffd2cb44cb49a878994f061386d642fb143d5
 
 build:
   entry_points:
-    - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
-    - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
+    # - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
+    # - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
-  script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<38 and py>310]
+  # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
+  # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
+  script: SETUPTOOLS_SCM_DEBUG=1 SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
+  # skip: true  # [py<38 and py>310]
   number: 0
+  noarch: python
 
 requirements:
   host:
+    - python >=3.8
+    - setuptools-scm
+    - setuptools-scm >=6.2
     - pip
-    - python
   run:
-    - python
+    - python >=3.8
     - area-detector-handlers
     - bluesky >=1.6.7
     - databroker =1.2
     - databroker-pack
-    - furo
     - h5py
     - intake
     - mongoquery >=1.3.6
@@ -55,7 +59,7 @@ test:
     - apstools
   commands:
     - pip check
-    - bluesky_snapshot --help
+    # - bluesky_snapshot --help
     # - bluesky_snapshot_viewer --help
     - spec2ophyd --help
   requires:
