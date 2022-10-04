@@ -14,7 +14,9 @@ build:
     - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
     - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
-  script: {{ PYTHON }} -m pip install -e . -vv
+  # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
+  # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
+  script: SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38 and py>310]
   number: 0
 
