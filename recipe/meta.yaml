@@ -11,22 +11,24 @@ source:
 
 build:
   entry_points:
-    - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
-    - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
+    # - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
+    # - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
   # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
   # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
   script: SETUPTOOLS_SCM_DEBUG=1 SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<38 and py>310]
+  # skip: true  # [py<38 and py>310]
   number: 0
+  noarch: python
 
 requirements:
   host:
-    - pip
-    - python
+    - python >=3.8
     - setuptools-scm
+    - setuptools-scm >=6.2
+    - pip
   run:
-    - python
+    - python >=3.8
     - area-detector-handlers
     - bluesky >=1.6.7
     - databroker =1.2
@@ -57,7 +59,7 @@ test:
     - apstools
   commands:
     - pip check
-    - bluesky_snapshot --help
+    # - bluesky_snapshot --help
     # - bluesky_snapshot_viewer --help
     - spec2ophyd --help
   requires:
