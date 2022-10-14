@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.7rc2" %}
+{% set version = "1.6.7rc3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apstools-{{ version }}.tar.gz
-  sha256: 3631f58473804e66e7aef74e0441b5f3eb9d27d9ea84894ef710a8d8969f3a3b
+  sha256: 22bd6a5a835271b5bfaec9d8e02eeadb9984b88851b2467d640079736805a884
 
 build:
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - python >=3.8
     - area-detector-handlers
     - bluesky >=1.6.7
-    - databroker =1.2
+    - databroker =1.2.5
     - databroker-pack
     - h5py
     - intake
