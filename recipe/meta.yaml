@@ -1,13 +1,13 @@
 {% set name = "apstools" %}
-{% set version = "1.6.7rc3" %}
+{% set version = "1.6.7rc4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apstools-{{ version }}.tar.gz
-  sha256: 22bd6a5a835271b5bfaec9d8e02eeadb9984b88851b2467d640079736805a884
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d0ad6ccba7327d11aafed3dba838891b24ec477fe86f1fe5220beb82bb2903fe
 
 build:
   entry_points:
@@ -35,6 +35,7 @@ requirements:
     - databroker-pack
     - h5py
     - intake
+    - matplotlib-base
     - mongoquery >=1.3.6
     - numpy
     - openpyxl
@@ -43,6 +44,7 @@ requirements:
     - pint
     - pip
     - prompt-toolkit
+    - psutil
     - pyepics >=3.4.3
     - pymongo
     - pyqt =5
