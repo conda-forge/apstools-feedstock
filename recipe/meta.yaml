@@ -57,7 +57,7 @@ requirements:
 test:
   imports:
     - apstools
-    - apstools.devices
+    # - apstools.devices
   commands:
     - pip check
     - spec2ophyd --help
