@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.7rc4" %}
+{% set version = "1.6.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d0ad6ccba7327d11aafed3dba838891b24ec477fe86f1fe5220beb82bb2903fe
+  sha256: d7165ca5a3fcc308e40f0b240c32f858e2af385bca07a833d2dc56c78b0d211d
 
 build:
   entry_points:
-    # - bluesky_snapshot = apstools.snapshot.application:snapshot_cli
-    # - bluesky_snapshot_viewer = apstools.snapshot.application:snapshot_gui
     - spec2ophyd = apstools.migration.spec2ophyd:main
   # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
   # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
@@ -59,6 +57,7 @@ requirements:
 test:
   imports:
     - apstools
+    - apstools.devices
   commands:
     - pip check
     - spec2ophyd --help
