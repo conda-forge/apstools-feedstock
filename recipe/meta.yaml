@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.9rc1" %}
+{% set version = "1.6.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5a6a46ac0546ac5f5cd88c13b24f39fb19c1372d9af2d5195eb30d127bfb5933
+  sha256: b5aeda35b08fcfe759c402be9286bc35663f174d871dc0b0a9d94febc73155a7
 
 build:
   entry_points:
@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <3.11
+    - python >=3.8, <=3.11
     - conda-verify
     - setuptools-scm
     - setuptools-scm >=6.2
