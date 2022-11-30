@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.8" %}
+{% set version = "1.6.9rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7091013884f066657e9a2e98d6585b089408c70cfeae809c4a25ddcc028958c8
+  sha256: 5a6a46ac0546ac5f5cd88c13b24f39fb19c1372d9af2d5195eb30d127bfb5933
 
 build:
   entry_points:
@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8, <3.11
     - setuptools-scm
     - setuptools-scm >=6.2
     - pip
@@ -47,6 +47,7 @@ requirements:
     - pymongo
     - pyqt =5
     - pyRestTable
+    - pysumreg
     - qt =5
     - readline !=8.1.2
     - spec2nexus
