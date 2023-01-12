@@ -1,7 +1,7 @@
 About apstools
 ==============
 
-Home: https://bcda-aps.github.io/apstools/
+Home: https://bcda-aps.github.io/apstools/latest/
 
 Package license: BSD-4-Clause
 

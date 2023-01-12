@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.9" %}
+{% set version = "1.6.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b5aeda35b08fcfe759c402be9286bc35663f174d871dc0b0a9d94febc73155a7
+  sha256: 892e966836a1d7e43789223386d7385fca880f4997ee30eb6c460fce0b810026
 
 build:
   entry_points:
@@ -67,7 +67,7 @@ test:
     - pip
 
 about:
-  home: https://bcda-aps.github.io/apstools/
+  home: https://bcda-aps.github.io/apstools/latest/
   summary: Various Python tools for use with the Bluesky Framework at the APS
   license: BSD-4-Clause
   license_file:
