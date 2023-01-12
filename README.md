@@ -1,7 +1,7 @@
 About apstools
 ==============
 
-Home: https://bcda-aps.github.io/apstools/
+Home: https://bcda-aps.github.io/apstools/latest/
 
 Package license: BSD-4-Clause
 
@@ -101,7 +101,7 @@ channel for Linux, Windows and OSX respectively.
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
-this feedstock's supporting files (e.g. the CI configuration files) with ``conda-smithy rerender``.
+this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
 For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
