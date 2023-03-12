@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.13" %}
+{% set version = "1.6.14rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41f2710fe57d48b2f7484bdcb8972d068b1a0c3ee5c9d3cb1238b8608567cc0b
+  sha256: 594e858b098276bbbbcf3f1d69545e0b41d2850f306fdf8acc882eb704524139
 
 build:
   entry_points:
@@ -47,7 +47,7 @@ requirements:
     - pyepics >=3.4.3
     - pymongo
     - pyqt =5
-    - pyRestTable
+    - pyRestTable >=2020.0.8
     - pysumreg
     - qt =5
     - readline !=8.1.2
