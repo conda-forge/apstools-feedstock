@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.6.17c1" %}
+{% set version = "1.6.17rc1" %}
 
 package:
   name: {{ name|lower }}
