@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.18" %}
-{% set sha256 = "4597bc227d882a01863d9259fea3017cf71563f20a6ef570a872744de40d1843" %}
+{% set version = "1.6.19rc1" %}
+{% set sha256 = "3e3232a995d4cdc8c6b07330e87f235d5ed4eb799d647d45716c624f36a2413e" %}
 
 package:
   name: {{ name|lower }}
@@ -52,8 +52,10 @@ requirements:
     - pysumreg
     - qt =5
     - readline !=8.1.2
+    - scipy
     - spec2nexus
     - sphinx >=5
+    - toolz
     - xlrd
     - xorg-libx11
 
