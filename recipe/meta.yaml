@@ -20,7 +20,6 @@ build:
 requirements:
   host:
     - python >=3.8, <=3.11
-    - conda-verify
     - setuptools-scm >=8.0
     - setuptools >=64
     - pip
@@ -49,12 +48,13 @@ requirements:
     - xlrd
 
 test:
-  imports:
-    - apstools
   commands:
     - pip check
     - spec2ophyd --help
+  imports:
+    - apstools
   requires:
+    - conda-verify
     - pip
 
 about:
