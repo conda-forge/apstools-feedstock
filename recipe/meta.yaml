@@ -14,8 +14,8 @@ build:
   entry_points:
     - spec2ophyd = apstools.migration.spec2ophyd:main
   # per https://github.com/pypa/setuptools_scm/issues/357#issuecomment-846476165
-  # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" pip install .
-  script: SETUPTOOLS_SCM_DEBUG=1 SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 setup.py --version)" {{ PYTHON }} -m pip install . -vv
+  # SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 -m setuptools_scm)" pip install .
+  script: SETUPTOOLS_SCM_DEBUG=1 SETUPTOOLS_SCM_PRETEND_VERSION="$(python3 -m setuptools_scm)" {{ PYTHON }} -m pip install . -vv
   # skip: true  # [py<38 and py>310]
   number: 0
   noarch: python
@@ -24,8 +24,8 @@ requirements:
   host:
     - python >=3.8, <=3.11
     - conda-verify
-    - setuptools-scm
-    - setuptools-scm >=6.2
+    - setuptools >=64
+    - setuptools-scm >=8.0
     - pip
   run:
     - python >=3.8, <=3.11
