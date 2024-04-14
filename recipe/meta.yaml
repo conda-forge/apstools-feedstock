@@ -15,7 +15,7 @@ build:
     - spec2ophyd = apstools.migration.spec2ophyd:main
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vvv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -53,17 +53,17 @@ requirements:
 test:
   commands:
     - pip check
-    - spec2ophyd --help
-  # imports:
-  #   - apstools
+  #   - spec2ophyd --help
+  imports:
+    - apstools
   #   - apstools.callbacks
   #   - apstools.devices
   #   - apstools.plans
   #   - apstools.synApps
   #   - apstools.utils
   requires:
-    - conda-verify
     - pip
+  #   - conda-verify
 
 about:
   home: https://bcda-aps.github.io/apstools/latest/
