@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.19rc1" %}
-{% set sha256 = "3e3232a995d4cdc8c6b07330e87f235d5ed4eb799d647d45716c624f36a2413e" %}
+{% set version = "1.6.19rc2" %}
+{% set sha256 = "8b53f88f720d18c3c79febefa700df8a0f3570ac8281436e1e56953a98a05a5f" %}
 
 package:
   name: {{ name|lower }}
@@ -47,7 +47,7 @@ requirements:
     # - readline !=8.1.2
     - scipy
     - spec2nexus >=2021.1.7
-    - toolz
+    - toolz >=0.12.1
     - xlrd
 
 test:
