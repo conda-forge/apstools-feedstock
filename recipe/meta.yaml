@@ -43,7 +43,6 @@ requirements:
     - pandas
     - pint
     - pip
-    - prompt-toolkit
     - psutil
     - pyepics >=3.4.3
     - pymongo
@@ -54,7 +53,6 @@ requirements:
     - readline !=8.1.2
     - scipy
     - spec2nexus
-    - sphinx >=5
     - toolz
     - xlrd
     - xorg-libx11
