@@ -51,11 +51,12 @@ requirements:
     - xlrd
 
 test:
-  # commands:
+  commands:
+    - pip --help
   #   - pip check
   #   - spec2ophyd --help
-  imports:
-    - apstools
+  # imports:
+  #   - apstools
   #   - apstools.callbacks
   #   - apstools.devices
   #   - apstools.plans
