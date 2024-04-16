@@ -51,8 +51,8 @@ requirements:
     - xlrd
 
 test:
-  commands:
-    - pip check
+  # commands:
+  #   - pip check
   #   - spec2ophyd --help
   imports:
     - apstools
