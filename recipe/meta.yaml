@@ -51,19 +51,19 @@ requirements:
     - xlrd
 
 test:
-  commands:
-    - pip --help
+  # commands:
+  #   - pip --help
   #   - pip check
   #   - spec2ophyd --help
-  # imports:
-  #   - apstools
+  imports:
+    - apstools
   #   - apstools.callbacks
   #   - apstools.devices
   #   - apstools.plans
   #   - apstools.synApps
   #   - apstools.utils
-  requires:
-    - pip
+  # requires:
+  #   - pip
   #   - conda-verify
 
 about:
