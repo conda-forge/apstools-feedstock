@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.19rc3" %}
-{% set sha256 = "5560a34de4e756ae1ea2f6022d95081e1d817127517d5654f11a1fa65b1ae6d2" %}
+{% set version = "1.6.19rc4" %}
+{% set sha256 = "20103db9af34f24a94dabd39b407e747ab1bfb6bc79a8b04c9e766421f8ca5f1" %}
 
 package:
   name: {{ name|lower }}
@@ -52,19 +52,19 @@ requirements:
 
 test:
   commands:
-    - pip --help
-  #   - pip check
-  #   - spec2ophyd --help
-  # imports:
-  #   - apstools
-  #   - apstools.callbacks
-  #   - apstools.devices
-  #   - apstools.plans
-  #   - apstools.synApps
-  #   - apstools.utils
-  # requires:
-  #   - pip
-  #   - conda-verify
+    - pip check
+    - spec2ophyd --help
+    - spec2ophyd --version
+  imports:
+    - apstools
+    - apstools.callbacks
+    - apstools.devices
+    - apstools.plans
+    - apstools.synApps
+    - apstools.utils
+  requires:
+    - pip
+    - conda-verify
 
 about:
   home: https://bcda-aps.github.io/apstools/latest/
