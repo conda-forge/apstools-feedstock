@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.19rc5" %}
-{% set sha256 = "6e4cf64f8e7b8c9af1df5b92c5e07f0766cc2bfabffa8ecefc658af4e4d345cb" %}
+{% set version = "1.6.19rc6" %}
+{% set sha256 = "41c1039122ee6552990a5c94b11dc0f53026e52a2331d1cf68c7aa437558b676" %}
 
 package:
   name: {{ name|lower }}
@@ -57,8 +57,10 @@ test:
     - spec2ophyd --version
   imports:
     - apstools
+    - apstools.beamtime
     - apstools.callbacks
     - apstools.devices
+    - apstools.migration
     - apstools.plans
     - apstools.synApps
     - apstools.utils
