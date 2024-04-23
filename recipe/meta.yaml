@@ -57,10 +57,8 @@ test:
     - spec2ophyd --version
   imports:
     - apstools
-    - apstools.beamtime
     - apstools.callbacks
     - apstools.devices
-    - apstools.migration
     - apstools.plans
     - apstools.synApps
     - apstools.utils
