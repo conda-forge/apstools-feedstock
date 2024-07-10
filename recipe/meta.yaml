@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.19" %}
-{% set sha256 = "b70917bd80283dfea7a29ace2d4b6da6444818701dc58e5822b1723bce66faf0" %}
+{% set version = "1.6.20" %}
+{% set sha256 = "36aff35c8055c55af1f2b6ebcd0d3cb943463b60dd8497b929621bf9cc42cdf8" %}
 
 package:
   name: {{ name|lower }}
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <=3.11
+    - python >=3.8, <=3.12
     - setuptools-scm >=8.0
     - setuptools >=64
     - pip
   run:
-    - python >=3.8, <=3.11
+    - python >=3.8, <=3.12
     - area-detector-handlers
     - bluesky >=1.6.7, !=1.11.0
     - bluesky-live
@@ -35,7 +35,7 @@ requirements:
     - intake <=1
     - matplotlib-base
     - mongoquery >=1.3.6
-    - numpy
+    - numpy <2
     - openpyxl
     - ophyd >=1.6.1
     - pint
