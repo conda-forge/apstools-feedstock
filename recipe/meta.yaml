@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.6.20" %}
-{% set sha256 = "36aff35c8055c55af1f2b6ebcd0d3cb943463b60dd8497b929621bf9cc42cdf8" %}
+{% set version = "1.7.0rc1" %}
+{% set sha256 = "35cf6ebbbdba7e0bc93d5ee8a2e9215d1680cf72ef5a2c823b7507ccfc97bd70" %}
 
 package:
   name: {{ name|lower }}
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8, <=3.12
+    - python >=3.9
     - setuptools-scm >=8.0
     - setuptools >=64
     - pip
   run:
-    - python >=3.8, <=3.12
+    - python >=3.9
     - area-detector-handlers
     - bluesky >=1.6.7, !=1.11.0
     - bluesky-live
