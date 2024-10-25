@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.7.0" %}
-{% set sha256 = "df51c833726cc78fa564135bfde55ca695e9d053d81ac4ed4e7f0aa9943c30d4" %}
+{% set version = "1.7.1rc3" %}
+{% set sha256 = "694808a20d3080325d32143521ffd4bb495747726fe9041f6741e289769088b6" %}
 
 package:
   name: {{ name|lower }}
@@ -41,7 +41,7 @@ requirements:
     - pint
     - pip
     - psutil
-    - pyepics >=3.4.2
+    - pyepics >=3.4.3
     - pyRestTable >=2020.0.8
     - pysumreg
     # - readline !=8.1.2
