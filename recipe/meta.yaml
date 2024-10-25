@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.7.1rc3" %}
-{% set sha256 = "a876ff3002bc26d184322ca9c61aed69175e998732917883ef5d87bc491bbce6" %}
+{% set version = "1.7.1" %}
+{% set sha256 = "ee56e9618745de01da2a5bb32118b4a42104adf07457b8ed5c88094712f7f82f" %}
 
 package:
   name: {{ name|lower }}
