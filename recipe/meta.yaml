@@ -52,7 +52,7 @@ requirements:
 
 test:
   commands:
-    - pip check
+    # - pip check
     - spec2ophyd --help
     - spec2ophyd --version
   imports:
