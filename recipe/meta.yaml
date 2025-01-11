@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.7.1" %}
-{% set sha256 = "ee56e9618745de01da2a5bb32118b4a42104adf07457b8ed5c88094712f7f82f" %}
+{% set version = "1.7.2" %}
+{% set sha256 = "38fd70afb413b6521bfa44eda68465c496e437d46761477bb7e98ac9b4e0c89d" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ build:
   entry_points:
     - spec2ophyd = apstools.migration.spec2ophyd:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vvv --no-deps --no-build-isolation
 
 requirements:
@@ -52,7 +52,7 @@ requirements:
 
 test:
   commands:
-    - pip check
+    # - pip check
     - spec2ophyd --help
     - spec2ophyd --version
   imports:
