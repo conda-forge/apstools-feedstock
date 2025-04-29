@@ -1,6 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.7.3rc2" %}
-{% set sha256 = "11bebf05adea06432bff2de005c7901f077062c6fa2c4cda1263a8f5f37c9c22" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: "9c1aff2d85e239c659a25746183cae9f73b9865e0b319b027d86cb718c1af96b"
 
 build:
   entry_points:
