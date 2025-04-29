@@ -1,6 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.7.2" %}
-{% set sha256 = "38fd70afb413b6521bfa44eda68465c496e437d46761477bb7e98ac9b4e0c89d" %}
+{% set version = "1.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: "9c1aff2d85e239c659a25746183cae9f73b9865e0b319b027d86cb718c1af96b"
 
 build:
   entry_points:
@@ -21,14 +20,14 @@ requirements:
   host:
     - python {{ python_min }}
     - setuptools-scm >=8.0
-    - setuptools >=64
+    - setuptools >=77
     - pip
   run:
     - python >={{ python_min }}
     - area-detector-handlers
     - bluesky >=1.6.7, !=1.11.0
     - bluesky-live
-    - databroker =1.2.5
+    - databroker <=1.999
     - databroker-pack
     - entrypoints
     - h5py
@@ -38,13 +37,13 @@ requirements:
     - numpy <2
     - openpyxl
     - ophyd >=1.6.1
+    - pandas
     - pint
     - pip
     - psutil
     - pyepics >=3.4.3
     - pyRestTable >=2020.0.8
     - pysumreg
-    # - readline !=8.1.2
     - scipy
     - spec2nexus >=2021.1.7
     - toolz >=0.12.1
@@ -70,7 +69,7 @@ test:
 about:
   home: https://bcda-aps.github.io/apstools/latest/
   summary: Various Python tools for use with the Bluesky Framework at the APS
-  license: BSD-4-Clause
+  license: LicenseRef-ANL-Open-Source-License
   license_file: LICENSE.txt
 
 extra:
