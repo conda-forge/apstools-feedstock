@@ -1,6 +1,6 @@
 {% set name = "apstools" %}
-{% set version = "1.7.3rc1" %}
-{% set sha256 = "15f215b1603304d2aafa9b78ec947e38d2511febb868a7927232001673ce14f6" %}
+{% set version = "1.7.3rc2" %}
+{% set sha256 = "11bebf05adea06432bff2de005c7901f077062c6fa2c4cda1263a8f5f37c9c22" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - setuptools-scm >=8.0
-    - setuptools >=64
+    - setuptools >=77
     - pip
   run:
     - python >={{ python_min }}
@@ -70,7 +70,7 @@ test:
 about:
   home: https://bcda-aps.github.io/apstools/latest/
   summary: Various Python tools for use with the Bluesky Framework at the APS
-  license: BSD-4-Clause
+  license: LicenseRef-ANL-Open-Source-License
   license_file: LICENSE.txt
 
 extra:
