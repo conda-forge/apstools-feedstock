@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.7.4rc1" %}
+{% set version = "1.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "c1004bb0b3f9a7b2ff0b506c4efab82ea5990154ef9621a36db4ae514c29f94d"
+  sha256: "ae14f95effa1b7af2d24180c0ec0073a6ab0f51b4f16e94c096232318040cee0"
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - area-detector-handlers
-    - bluesky >=1.6.7, !=1.11.0
+    - bluesky >=1.6.7,!=1.11.0
     - bluesky-live
     - databroker <=1.999
     - databroker-pack
