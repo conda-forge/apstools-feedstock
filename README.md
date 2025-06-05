@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apstools-feedst
 
 Home: https://bcda-aps.github.io/apstools/latest/
 
-Package license: BSD-4-Clause
+Package license: LicenseRef-ANL-Open-Source-License
 
 Summary: Various Python tools for use with the Bluesky Framework at the APS
 
