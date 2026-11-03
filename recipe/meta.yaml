@@ -1,5 +1,5 @@
 {% set name = "apstools" %}
-{% set version = "1.7.13rc1" %}
+{% set version = "1.7.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "1e8b7f995934aad8dd79a722eec9e96a9602a011e6e404dc007de856527bffd9"
+  sha256: "0650ff1085b36a68d3f6690408df3c93d8bc133e6bed2544d12d1893ab2f7006"
 
 build:
   entry_points:
